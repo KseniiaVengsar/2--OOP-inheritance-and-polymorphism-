@@ -22,7 +22,7 @@ void print_info(Figure* figure) {
 }
 // /////////////////////////////////////////////////////////////////////////////////
 class Triangle :public Figure {
-//Треугольник:
+//РўСЂРµСѓРіРѕР»СЊРЅРёРє:
 protected:
 int a; int b; int c;
 int A; int B; int C;
@@ -37,46 +37,46 @@ public:
 		C = C_;
 	}	
 	 void getType() override {
-		 std::cout << "Треугольник:" << std::endl;
+		 std::cout << "РўСЂРµСѓРіРѕР»СЊРЅРёРє:" << std::endl;
 
 	}
 	void print_sides_count() override {
 		
-		std::cout << "Стороны: " << "a = " << a << " " << "b = " << b << " " << "c = " << c  << std::endl;
-		std::cout << "Углы: " << "A = " << A << " " << "B = " << B << " " << "C = " << C << std::endl;
+		std::cout << "РЎС‚РѕСЂРѕРЅС‹: " << "a = " << a << " " << "b = " << b << " " << "c = " << c  << std::endl;
+		std::cout << "РЈРіР»С‹: " << "A = " << A << " " << "B = " << B << " " << "C = " << C << std::endl;
 	}
 };
 class Right_triangle :public Triangle {
-//Прямоугольный треугольник:
+//РџСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє:
 public:
 	Right_triangle( int a_, int b_, int c_, int A_, int B_,int C_):Triangle( a_, b_,c_, A_, B_, C_){
 		
 	}
 	void getType() override {
-		std::cout << "Прямоугольный треугольник:" << std::endl;
+		std::cout << "РџСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє:" << std::endl;
 
 	}
 };
 class Isosceles_triangle :public Triangle {
-//Равнобедренный треугольник////////равнобедренный треугольник (стороны a = c равны, углы A = C равны);a_, b_, b_, A_, B_, B_
+//Р Р°РІРЅРѕР±РµРґСЂРµРЅРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє////////СЂР°РІРЅРѕР±РµРґСЂРµРЅРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє (СЃС‚РѕСЂРѕРЅС‹ a = c СЂР°РІРЅС‹, СѓРіР»С‹ A = C СЂР°РІРЅС‹);a_, b_, b_, A_, B_, B_
 public:
 	Isosceles_triangle(int a_, int b_, int A_, int B_) :Triangle( a_, b_, b_, A_, B_, B_) {
 		
 	}
 	void getType() override {
-		std::cout << "Равнобедренный треугольник:" << std::endl;
+		std::cout << "Р Р°РІРЅРѕР±РµРґСЂРµРЅРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє:" << std::endl;
 
 	}
 	
 };
 class Equilateral_triangle :public Triangle {
-//Равносторонний треугольник
+//Р Р°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє
 public:
 	Equilateral_triangle( int a_,int A_) :Triangle( a_, a_, a_, A_, A_, A_) {
 	
 	}
 	void getType() override {
-		std::cout << "Равносторонний треугольник:" << std::endl;
+		std::cout << "Р Р°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє:" << std::endl;
 
 	}
 };
@@ -84,7 +84,7 @@ public:
 ////////////////////////////////////////////////////////////////////////////////
 class Quadrangle :public Figure {
 protected:
-//Четырёхугольник:
+//Р§РµС‚С‹СЂС‘С…СѓРіРѕР»СЊРЅРёРє:
 	int a; int b; int c; int d;
 	int A; int B; int C; int D;
 public:
@@ -99,55 +99,55 @@ public:
 		D = D_;
 	}
 	void print_sides_count() override {
-		std::cout << "Стороны: " << "a = " << a << " " << "b = " << b << " " << "c = " << c << " " << "d = " << d << std::endl;
-		std::cout << "Углы: " << "A = " << A << " " << "B = " << B << " " << "C = " << C << " " << "D = " << D << std::endl;
+		std::cout << "РЎС‚РѕСЂРѕРЅС‹: " << "a = " << a << " " << "b = " << b << " " << "c = " << c << " " << "d = " << d << std::endl;
+		std::cout << "РЈРіР»С‹: " << "A = " << A << " " << "B = " << B << " " << "C = " << C << " " << "D = " << D << std::endl;
 	}
 	void getType() override {
-		std::cout << "Четырёхугольник:" << std::endl;
+		std::cout << "Р§РµС‚С‹СЂС‘С…СѓРіРѕР»СЊРЅРёРє:" << std::endl;
 
 	}
 };
 class Rectangle :public Quadrangle {
-	//Прямоугольник:
+	//РџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє:
 public:
 	Rectangle( int a_, int b_, int A_) :Quadrangle( a_, b_, a_, b_, A_, A_, A_, A_) {
 
 	}
 	void getType() override {
-		std::cout << "Прямоугольник:" << std::endl;
+		std::cout << "РџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє:" << std::endl;
 
 	}
 
 };
 class Square :public Quadrangle {
-	//Квадрат 
+	//РљРІР°РґСЂР°С‚ 
 public:
 	Square( int a_,int A_) :Quadrangle( a_, a_, a_, a_, A_, A_, A_, A_) {
 	
 	}
 	void getType() override {
-		std::cout << "Квадрат:" << std::endl;
+		std::cout << "РљРІР°РґСЂР°С‚:" << std::endl;
 
 	}
 };
 class Parallelogram :public Quadrangle {
-	//Параллелограмм
+	//РџР°СЂР°Р»Р»РµР»РѕРіСЂР°РјРј
 public:
 	Parallelogram( int a_, int b_,  int A_, int B_) :Quadrangle( a_, b_, a_, b_, A_, B_, A_, B_) {
 
 	}
 	void getType() override {
-		std::cout << "Параллелограмм:" << std::endl;
+		std::cout << "РџР°СЂР°Р»Р»РµР»РѕРіСЂР°РјРј:" << std::endl;
 
 	}
 };
 class Rhombus :public Quadrangle {
-	//Ромб 
+	//Р РѕРјР± 
 public:
 	Rhombus( int a_, int A_, int B_) :Quadrangle( a_, a_, a_, a_, A_, B_, A_, B_) {
 	}
 	void getType() override {
-		std::cout << "Ромб:" << std::endl;
+		std::cout << "Р РѕРјР±:" << std::endl;
 
 	}
 };
@@ -188,7 +188,7 @@ public:
 		print_info(parallelogram);
 		std::cout << std::endl;
 
-		// Очистка памяти
+		// РћС‡РёСЃС‚РєР° РїР°РјСЏС‚Рё
 		//delete figure;
 		delete triangle;
 		delete right_triangle;
@@ -205,12 +205,12 @@ public:
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 // 
-//В классе Figure у вас добавлено 8 членов класса int - 4 стороны и 4 угла.
-//Но например в треугольнике две из этих переменных не используются, и будут просто висеть в памяти мертвым грузом.
-//Или например, в будущем мы сделаем фигуру - круг, у которой вообще не будет сторон и углов.
-//Получается излишний расход памяти.Чтобы так не было,
-// вам следует убрать стороны и углы из Figure, 
-//и переместить их только в те классы, где они реально используются.
-//То есть в треугольнике будет 3 стороны и 3 угла, в четырехугольнике - 4 стороны и 4 угла.
-//А в Figure не будет ни того ни другого.
+//Г‚ ГЄГ«Г Г±Г±ГҐ Figure Гі ГўГ Г± Г¤Г®ГЎГ ГўГ«ГҐГ­Г® 8 Г·Г«ГҐГ­Г®Гў ГЄГ«Г Г±Г±Г  int - 4 Г±ГІГ®Г°Г®Г­Г» ГЁ 4 ГіГЈГ«Г .
+//ГЌГ® Г­Г ГЇГ°ГЁГ¬ГҐГ° Гў ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГҐ Г¤ГўГҐ ГЁГ§ ГЅГІГЁГµ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»Гµ Г­ГҐ ГЁГ±ГЇГ®Г«ГјГ§ГіГѕГІГ±Гї, ГЁ ГЎГіГ¤ГіГІ ГЇГ°Г®Г±ГІГ® ГўГЁГ±ГҐГІГј Гў ГЇГ Г¬ГїГІГЁ Г¬ГҐГ°ГІГўГ»Г¬ ГЈГ°ГіГ§Г®Г¬.
+//Г€Г«ГЁ Г­Г ГЇГ°ГЁГ¬ГҐГ°, Гў ГЎГіГ¤ГіГ№ГҐГ¬ Г¬Г» Г±Г¤ГҐГ«Г ГҐГ¬ ГґГЁГЈГіГ°Гі - ГЄГ°ГіГЈ, Гі ГЄГ®ГІГ®Г°Г®Г© ГўГ®Г®ГЎГ№ГҐ Г­ГҐ ГЎГіГ¤ГҐГІ Г±ГІГ®Г°Г®Г­ ГЁ ГіГЈГ«Г®Гў.
+//ГЏГ®Г«ГіГ·Г ГҐГІГ±Гї ГЁГ§Г«ГЁГёГ­ГЁГ© Г°Г Г±ГµГ®Г¤ ГЇГ Г¬ГїГІГЁ.Г—ГІГ®ГЎГ» ГІГ ГЄ Г­ГҐ ГЎГ»Г«Г®,
+// ГўГ Г¬ Г±Г«ГҐГ¤ГіГҐГІ ГіГЎГ°Г ГІГј Г±ГІГ®Г°Г®Г­Г» ГЁ ГіГЈГ«Г» ГЁГ§ Figure, 
+//ГЁ ГЇГҐГ°ГҐГ¬ГҐГ±ГІГЁГІГј ГЁГµ ГІГ®Г«ГјГЄГ® Гў ГІГҐ ГЄГ«Г Г±Г±Г», ГЈГ¤ГҐ Г®Г­ГЁ Г°ГҐГ Г«ГјГ­Г® ГЁГ±ГЇГ®Г«ГјГ§ГіГѕГІГ±Гї.
+//Г’Г® ГҐГ±ГІГј Гў ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄГҐ ГЎГіГ¤ГҐГІ 3 Г±ГІГ®Г°Г®Г­Г» ГЁ 3 ГіГЈГ«Г , Гў Г·ГҐГІГ»Г°ГҐГµГіГЈГ®Г«ГјГ­ГЁГЄГҐ - 4 Г±ГІГ®Г°Г®Г­Г» ГЁ 4 ГіГЈГ«Г .
+//ГЂ Гў Figure Г­ГҐ ГЎГіГ¤ГҐГІ Г­ГЁ ГІГ®ГЈГ® Г­ГЁ Г¤Г°ГіГЈГ®ГЈГ®.
 
